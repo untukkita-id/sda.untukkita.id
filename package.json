@@ -3,16 +3,43 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint \"**/*.{js,jsx}\" \"*.config.js\"",
+    "lint:next": "next lint",
+    "format": "prettier --write \"./**/*.{js,jsx}\"",
+    "prepare": "husky install",
+    "test": "mocha"
   },
   "dependencies": {
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
     "autoprefixer": "^10.2.6",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "mocha": "^9.0.3",
+    "mocha-eslint": "^7.0.0",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "prettier": "^2.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   }
 }
