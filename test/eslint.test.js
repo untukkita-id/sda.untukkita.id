@@ -3,7 +3,15 @@ const lint = require('mocha-eslint');
 // Array of paths to lint
 // Note: a seperate Mocha test will be run for each path and each file which
 // matches a glob pattern
-const paths = ['pages/**/*.js', 'pages/**/*.jsx', 'lib', 'etc', 'data'];
+const paths = [
+  'pages/**/*.js',
+  'pages/**/*.jsx',
+  'components/**/*.js',
+  'components/**/*.jsx',
+  'lib',
+  'etc',
+  'data',
+];
 
 const options = {
   // Specify style of output
