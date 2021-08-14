@@ -1,33 +1,32 @@
-export default function CardFaskes({
-  IdFasked,
-  name,
-  alamat,
-  hotline,
-  address,
-  socialmedia,
-  category,
-}) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+
+export default function CardFaskes({ nama, hotline, socialmedia, kategori, alamat }) {
   return (
-    <div id="{IdFaskes}" className="px-8 py-4">
-      <div className="data-rumah-sakit">
-        <div className="alamat-rumah-sakit border-2 border-gray-700 rounded-xl mt-4 p-4">
-          <div className="bagian-atas ">
-            <div className="heading">
-              <h4 className="text-xl font-bold">{nama}</h4>
-              <p className="text-lg font-semibold">{category}</p>
-            </div>
-          </div>
-          <div className="bagian-bawah pt-4 flex flex-wrap gap-3">
-            <a href="#" className="flex">
-              <i className="fa fa-phone-alt self-center" />
-              <p className="pl-2">{phone}</p>
-            </a>
-            <a href="#" className="flex">
-              <i className="fas fa-map-marker-alt self-center" />
-              <p className="pl-2">{address}</p>
-            </a>
-          </div>
-        </div>
+    <div className="border-2 border-gray-700 rounded-lg mt-4 p-5">
+      <div className="rounded-md bg-gray-500 max-w-max">
+        <p className="text-xs font-semibold text-white py-1 px-2">{kategori}</p>
+      </div>
+      <h3 className="text-xl font-bold mt-2">{nama}</h3>
+      <div className="pt-2 flex flex-wrap flex-col gap-3">
+        <Link href={`https://www.google.com/search?q=${alamat}`} passHref>
+          <a className="hover:text-indigo-700 hover:font-medium active:text-blue-800 active:font-bold">
+            Alamat: <span className="underline">{alamat}</span>
+          </a>
+        </Link>
+
+        <Link href={`tel:${hotline}`} passHref>
+          <a className="hover:text-indigo-700 hover:font-medium active:text-blue-800 active:font-bold">
+            Telepon: <span className="underline">{hotline}</span>
+          </a>
+        </Link>
+
+        <Link href={`tel:${socialmedia}`} passHref>
+          <a className="hover:text-indigo-700 hover:font-medium active:text-blue-800 active:font-bold">
+            Instagram: <span className="underline">{socialmedia}</span>
+          </a>
+        </Link>
       </div>
     </div>
   );
