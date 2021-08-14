@@ -20,7 +20,7 @@ export default function HomeMenu() {
       <Link key={item.link} href={item.link} passHref>
         <div
           key={item.link}
-          className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200"
+          className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100"
         >
           <h4 className="font-bold text-lg uppercase">{item.title}</h4>
           <p className="mt-1">{item.description}</p>
