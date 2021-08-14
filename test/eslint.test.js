@@ -8,9 +8,7 @@ const paths = [
   'pages/**/*.jsx',
   'components/**/*.js',
   'components/**/*.jsx',
-  'lib',
-  'etc',
-  'data',
+  'lib/**/*.js',
 ];
 
 const options = {
@@ -30,7 +28,7 @@ const options = {
   strict: true, // Defaults to `false`, only notify the warnings
 
   // Specify the mocha context in which to run tests
-  contextName: 'eslint', // Defaults to `eslint`, but can be any string
+  contextName: 'Linting Check - ESLINT', // Defaults to `eslint`, but can be any string
 
   exclude: ['**/node_modules/**', '**/bower_components/**'],
 };
