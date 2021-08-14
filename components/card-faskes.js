@@ -6,7 +6,7 @@ export default function CardFaskes() {
         <div className="alamat-rumah-sakit border-2 border-gray-700 rounded-xl mt-4 p-4">
           <div className="bagian-atas ">
             <div className="heading">
-              <h4 className="text-xl font-bold">RSUD Sidoarjo</h4>
+              <h4 className="text-xl font-bold">{nama}</h4>
               <p className="text-lg font-semibold">Rumah Sakit</p>
             </div>
           </div>
