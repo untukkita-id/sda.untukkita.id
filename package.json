@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn run fetch-faskes && next build",
+    "build": "yarn run fetch-data && next build",
     "start": "next start",
     "lint": "eslint \"**/*.{js,jsx}\" \"*.config.js\"",
     "lint:next": "next lint",
