@@ -2,13 +2,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn run fetch-faskes && next build",
     "start": "next start",
     "lint": "eslint \"**/*.{js,jsx}\" \"*.config.js\"",
     "lint:next": "next lint",
     "format": "prettier --write \"./**/*.{js,jsx}\"",
     "prepare": "husky install",
-    "test": "mocha"
+    "test": "mocha",
+    "fetch-data": "node ./lib/faskes-fetcher.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
