@@ -1,8 +1,8 @@
-## UntukKita Sidoarjo
+# UntukKita Sidoarjo
 
-### Caption Template Vaksinasi (Instagram)
+## Caption Template Vaksinasi (Instagram)
 
-```
+```txt
 ⚠️ Vaksinasi ini KHUSUS warga ber-KTP / DOMISILI wilayah Kab. Sidoarjo
 
 Tanggal: TANGGAL
@@ -18,5 +18,5 @@ Syarat:
 _SYARATVAKSIN_
 
 Berani Vaksin Lawan Covid-19!
-#untukkitasda #vaksinsidoarjo #vaksinasisidoarjo 
+#untukkitasda #vaksinsidoarjo #vaksinasisidoarjo
 ```
