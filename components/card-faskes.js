@@ -1,33 +1,42 @@
-export default function CardFaskes({
-  IdFasked,
-  name,
-  alamat,
-  hotline,
-  address,
-  socialmedia,
-  category,
-}) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
+
+export default function CardFaskes({ nama, hotline, socialmedia, kategori, alamat }) {
+  function stripgooglemapaddress(address) {
+    const a = address.split(',');
+    const result = `${a[0]}, ${a[1]}, ${a[2]}, ${a[3]}`;
+    return result;
+  }
+
   return (
-    <div id="{IdFaskes}" className="px-8 py-4">
-      <div className="data-rumah-sakit">
-        <div className="alamat-rumah-sakit border-2 border-gray-700 rounded-xl mt-4 p-4">
-          <div className="bagian-atas ">
-            <div className="heading">
-              <h4 className="text-xl font-bold">{nama}</h4>
-              <p className="text-lg font-semibold">{category}</p>
-            </div>
-          </div>
-          <div className="bagian-bawah pt-4 flex flex-wrap gap-3">
-            <a href="#" className="flex">
-              <i className="fa fa-phone-alt self-center" />
-              <p className="pl-2">{phone}</p>
-            </a>
-            <a href="#" className="flex">
-              <i className="fas fa-map-marker-alt self-center" />
-              <p className="pl-2">{address}</p>
-            </a>
-          </div>
-        </div>
+    <div className="border-2 border-gray-700 rounded-lg mt-4 p-5">
+      <div className="rounded-md bg-gray-500 max-w-max">
+        <p className="text-xs font-semibold text-white py-1 px-2">{kategori}</p>
+      </div>
+      <h3 className="text-xl font-bold mt-2">{nama}</h3>
+      <div className="pt-2 flex flex-wrap flex-col gap-3">
+        <Link href={`tel:${hotline}`} passHref>
+          <a className="flex gap-2 text-lg text-blue-500 hover:text-indigo-700 hover:font-medium active:text-blue-800 active:font-bold hover:cursor-pointer">
+            <FontAwesomeIcon className="self-center" icon={faPhone} />
+            {hotline}
+          </a>
+        </Link>
+
+        <Link href={`https://www.google.com/search?q=${alamat}`} passHref>
+          <a className="flex gap-2 text-md">
+            <FontAwesomeIcon className="self-auto" icon={faMapMarkerAlt} size="lg" />
+            {stripgooglemapaddress(alamat)}
+          </a>
+        </Link>
+
+        <Link href={`https://instagram.com/${socialmedia}`} passHref>
+          <a className="flex gap-2 text-md">
+            <FontAwesomeIcon className="self-center" icon={faInstagram} size="lg" />
+            {socialmedia}
+          </a>
+        </Link>
       </div>
     </div>
   );

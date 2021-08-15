@@ -2,13 +2,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn run fetch-data && next build",
     "start": "next start",
     "lint": "eslint \"**/*.{js,jsx}\" \"*.config.js\"",
     "lint:next": "next lint",
     "format": "prettier --write \"./**/*.{js,jsx}\"",
     "prepare": "husky install",
-    "test": "mocha"
+    "test": "mocha",
+    "fetch-data": "node ./lib/faskes-fetcher.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -23,6 +24,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "autoprefixer": "^10.2.6",
+    "cross-fetch": "^3.1.4",
+    "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "^11.1.0",
