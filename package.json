@@ -9,7 +9,10 @@
     "format": "prettier --write \"./**/*.{js,jsx}\"",
     "prepare": "husky install",
     "test": "mocha",
-    "fetch-data": "node ./lib/faskes-fetcher.js"
+    "fetch-data": "node ./lib/faskes-fetcher.js",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -22,8 +25,12 @@
     "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@next/bundle-analyzer": "^11.1.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "autoprefixer": "^10.2.6",
+    "cross-env": "^7.0.3",
     "cross-fetch": "^3.1.4",
     "dotenv": "^10.0.0",
     "eslint": "^7.32.0",

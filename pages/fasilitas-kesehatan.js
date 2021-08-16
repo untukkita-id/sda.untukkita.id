@@ -1,10 +1,12 @@
+import dynamic from 'next/dynamic';
 import PageTitle from '../components/page-title';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import CardFaskes from '../components/card-faskes';
 import SectionGrub from '../components/sections';
 
-const DATAFASKES = require('../data/faskes-sheets.json');
+// eslint-disable-next-line import/no-unresolved
+import DATAFASKES from '../data/faskes-sheets.json';
 
 export default function FasilitasKesehatan() {
   const componentList = [];
