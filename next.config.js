@@ -45,11 +45,6 @@ const securityHeaders = [
 ];
 
 module.exports = withBundleAnalyzer({
-  experimental: {
-    optimizeCss: true,
-    optimizeImages: true,
-    workerThreads: true,
-  },
   headers: async () => {
     return [
       {
