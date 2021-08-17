@@ -1,12 +1,13 @@
+import Image from 'next/image';
 import NavbarButton from './navbar-bottom';
 
 export default function Header({ title }) {
   return (
     <>
-      <div id="header" className="bg-gray-200 py-4 px-8 flex gap-4">
-        <div className="border-2 border-gray p-2" />
+      <header id="header" className="bg-gray-200 py-4 px-8 flex gap-4">
+        <Image src="/logo.svg" height={30} width={50} alt="UntukKita.SDA Logo" />
         <p className="text-lg">{title}</p>
-      </div>
+      </header>
       <NavbarButton />
     </>
   );
