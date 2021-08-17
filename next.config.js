@@ -4,9 +4,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com *.googletagmanager.com analytics.google.com;
   img-src 'self' blob: data: https:;
   style-src 'self' 'unsafe-inline';
+  connect-src 'self' analytics.google.com stats.g.doubleclick.net;
+  object-src 'none';
 `;
 
 const securityHeaders = [
