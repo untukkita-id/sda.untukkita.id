@@ -2,8 +2,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-module.exports = withBundleAnalyzer({});
-
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com;
@@ -46,15 +44,13 @@ const securityHeaders = [
   },
 ];
 
-module.exports = {
-  i18n: {
-    locales: ['id'],
-    defaultLocale: 'id',
+module.exports = withBundleAnalyzer({
+  experimental: {
+    optimizeCss: true,
+    optimizeImages: true,
+    workerThreads: true,
   },
-};
-
-module.exports = {
-  async headers() {
+  headers: async () => {
     return [
       {
         source: '/(.*)',
@@ -62,4 +58,9 @@ module.exports = {
       },
     ];
   },
-};
+  i18n: {
+    locales: ['id'],
+    defaultLocale: 'id',
+  },
+  reactStrictMode: true,
+});
