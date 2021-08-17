@@ -32,10 +32,12 @@ export default function HomeMenu() {
   return (
     <div id="home-menu" className="px-8 pt-4">
       <h2 className="text-2xl font-bold">Layanan Tanggap COVID-19 kota Sidoarjo</h2>
-      <div className="border-4 border-red-900 bg-red-600 rounded-lg mt-4 p-5 text-white active:bg-red-800 hover:bg-red-700 hover:underline active:font-bold">
-        <h3 className="text-xl font-bold uppercase">Kontak Darurat</h3>
-        <p className="mt-1 text-lg">Kontak Darurat COVID-19 kota Sidoarjo</p>
-      </div>
+      <Link href="/kontak-darurat" passHref>
+        <div className="border-4 border-red-900 bg-red-600 rounded-lg mt-4 p-5 text-white active:bg-red-800 hover:bg-red-700 hover:underline active:font-bold">
+          <h3 className="text-xl font-bold uppercase">Kontak Darurat</h3>
+          <p className="mt-1 text-lg">Kontak Darurat COVID-19 kota Sidoarjo</p>
+        </div>
+      </Link>
       <div className="mt-4 flex flex-col w-full gap-4 flex-wrap">{componentList}</div>
     </div>
   );
