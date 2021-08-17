@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import PageTitle from '../components/page-title';
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -26,12 +27,17 @@ export default function FasilitasKesehatan() {
 
   return (
     <div id="home" className="text-gray-700">
+      <Head>
+        <title>UntukKita Sidoarjo - Daftar Fasilitas Kesehatan di Kota Sidoarjo</title>
+      </Head>
       <Header title="Fasilitas Kesehatan" />
       <PageTitle
         title="Data Fasilitas Kesehatan di Kota Sidoarjo"
         description="Kumpulan data fasilitas kesehatan yang terdapat di kota Sidoarjo"
       />
-      <SectionGrub title="Data Fasilitas Kesehatan">{componentList}</SectionGrub>
+      <SectionGrub title="Data Fasilitas Kesehatan">
+        <ul>{componentList}</ul>
+      </SectionGrub>
       <Footer />
     </div>
   );

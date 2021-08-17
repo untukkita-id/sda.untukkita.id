@@ -11,14 +11,14 @@ export default function CardFaskes({ nama, hotline, socialmedia, kategori, alama
   }
 
   return (
-    <div className="border-2 border-gray-700 rounded-lg mt-4 p-5">
+    <li className="border-2 border-gray-700 rounded-lg mt-4 p-5">
       <div className="rounded-md bg-gray-500 max-w-max">
         <p className="text-xs font-semibold text-white py-1 px-2">{kategori}</p>
       </div>
-      <h3 className="text-xl font-bold mt-2">{nama}</h3>
+      <p className="text-lg font-bold mt-2">{nama}</p>
       <div className="pt-2 flex flex-wrap flex-col gap-3">
         <Link href={`tel:${hotline}`} passHref>
-          <a className="flex gap-2 text-lg text-blue-500 hover:text-indigo-700 hover:font-medium active:text-blue-800 active:font-bold hover:cursor-pointer">
+          <a className="flex gap-2 text-lg text-blue-700 hover:text-indigo-800 hover:font-medium active:text-blue-900 active:font-bold hover:cursor-pointer">
             <FontAwesomeIcon className="self-center" icon={faPhone} />
             {hotline}
           </a>
@@ -38,6 +38,6 @@ export default function CardFaskes({ nama, hotline, socialmedia, kategori, alama
           </a>
         </Link>
       </div>
-    </div>
+    </li>
   );
 }
