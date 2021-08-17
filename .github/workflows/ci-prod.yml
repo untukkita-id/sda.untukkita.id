@@ -21,7 +21,7 @@ jobs:
 
       - name: Waiting for 200 from the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1.2
-        id: waitFor200
+        id: netlify
         with:
           site_name: '4028acdf-88ba-4204-9ffe-2b79b1cd4b46'
         env:
@@ -30,6 +30,15 @@ jobs:
       - name: Lighthouse CI
         run: |
           yarn global add @lhci/cli@0.8.x
-          lhci autorun --upload.target=temporary-public-storage --collect.url=${{ steps.waitForNetlifyDeploy.outputs.url }} || echo "LHCI failed!"
+          echo -e "\n"
+          echo "Lighthouse CI: Collecting URLs"
+          lhci collect --url=${{ steps.netlify.outputs.url }} --url=${{ steps.netlify.outputs.url }}/fasilitas-kesehatan -n=5
+          echo -e "\n"
+          echo "Lighthouse CI: Asserting Data"
+          lhci assert  --preset=lighthouse:no-pwa
+          echo -e "\n"
+          echo "Lighthouse CI: Uploading Reports"
+          lhci upload --target "temporary-public-storage" --githubAppToken "$LHCI_GITHUB_APP_TOKEN" --githubToken "$GITHUB_TOKEN"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
