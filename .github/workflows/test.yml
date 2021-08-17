@@ -22,6 +22,3 @@ jobs:
 
       - name: 💻 Run tests
         run: yarn run test
-
-      - name: NextJS Analyzer
-        run: yarn run analyze

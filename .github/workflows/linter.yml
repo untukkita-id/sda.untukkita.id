@@ -19,7 +19,6 @@ jobs:
           node-version: '14'
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn fetch-data
 
       - name: Linting Codebase
         uses: docker://ghcr.io/github/super-linter:slim-v4

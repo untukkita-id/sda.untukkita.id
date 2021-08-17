@@ -16,9 +16,6 @@ jobs:
       - name: Install
         run: yarn install --frozen-lockfile
 
-      - name: Build
-        run: yarn build
-
       - name: Waiting for 200 from the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1.2
         id: netlify
