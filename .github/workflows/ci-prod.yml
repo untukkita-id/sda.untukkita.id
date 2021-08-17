@@ -32,10 +32,10 @@ jobs:
           yarn global add @lhci/cli@0.8.x
           echo -e "\n"
           echo "Lighthouse CI: Collecting URLs"
-          lhci collect --url=${{ steps.netlify.outputs.url }} --url=${{ steps.netlify.outputs.url }}/fasilitas-kesehatan -n=5
+          lhci collect --url=${{ steps.netlify.outputs.url }} --url=${{ steps.netlify.outputs.url }}/fasilitas-kesehatan -n=3
           echo -e "\n"
           echo "Lighthouse CI: Asserting Data"
-          lhci assert  --config=./lighthouserc.js
+          lhci assert --config=./lighthouserc.js
           echo -e "\n"
           echo "Lighthouse CI: Uploading Reports"
           lhci upload --target "temporary-public-storage" --githubAppToken "$LHCI_GITHUB_APP_TOKEN" --githubToken "$GITHUB_TOKEN"
