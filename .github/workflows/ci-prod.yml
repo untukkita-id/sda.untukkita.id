@@ -8,24 +8,28 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
+      - name: Setup Node.js 14.x
         uses: actions/setup-node@v1
-      - name: Install
-        run: |
-          npm ci
-      - name: Build
-        run: |
-          npm run build
-      - name: Waiting for 200 from Netlify
-        uses: probablyup/wait-for-netlify-action@3.2.0
-        id: waitForNetlifyDeploy
         with:
-          site_id: '4028acdf-88ba-4204-9ffe-2b79b1cd4b46'
+          node-version: '14.x'
+
+      - name: Install
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Waiting for 200 from the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1.2
+        id: waitFor200
+        with:
+          site_name: '4028acdf-88ba-4204-9ffe-2b79b1cd4b46'
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+
       - name: Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.3.x
+          yarn global add @lhci/cli@0.8.x
           lhci autorun --upload.target=temporary-public-storage --collect.url=${{ steps.waitForNetlifyDeploy.outputs.url }} || echo "LHCI failed!"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
