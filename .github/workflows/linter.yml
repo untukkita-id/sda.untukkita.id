@@ -17,9 +17,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-          cache: 'npm'
-      - run: npm install
-      - run: npm test
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - run: yarn fetch-data
 
       - name: Linting Codebase
         uses: docker://ghcr.io/github/super-linter:slim-v4
@@ -31,3 +31,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_BASH: FALSE
           VALIDATE_BASH_EXEC: FALSE
+          LINTER_RULES_PATH: /
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.js
