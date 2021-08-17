@@ -14,17 +14,17 @@ export default function FasilitasKesehatan() {
           description="Coba periksa kembali URL yang dimasukkan dan coba lagi."
         />
         <Link href="/" passHref>
-          <div className="px-8 text-blue-700 hover:text-blue-800 active:underline active:text-blue-900 hover:font-semibold cursor-pointer">
+          <div className="px-8 text-blue-700 hover:text-blue-800 active:underline active:text-blue-900 hover:font-bold cursor-pointer text-lg font-semibold">
             <p>Kembali ke halaman utama</p>
           </div>
         </Link>
         <Link href="/fasilitas-kesehatan" passHref>
-          <div className="px-8 text-blue-700 hover:text-blue-800 active:underline active:text-blue-900 hover:font-semibold cursor-pointer">
+          <div className="px-8 text-blue-700 hover:text-blue-800 active:underline active:text-blue-900 hover:font-semibold cursor-pointer mt-1">
             <p>Fasilitas Kesehatan</p>
           </div>
         </Link>
         <Link href="/" passHref>
-          <div className="px-8 text-blue-700 hover:text-blue-800 active:underline active:text-blue-900 hover:font-semibold cursor-pointer">
+          <div className="px-8 text-blue-700 hover:text-blue-800 active:underline active:text-blue-900 hover:font-semibold cursor-pointer mt-1">
             <p>Layanan Kesehatan</p>
           </div>
         </Link>
