@@ -1,13 +1,13 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import useSWR from 'swr';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import PageTitle from '../components/page-title';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import CardFaskes from '../components/card-faskes';
 import SectionGrub from '../components/sections';
 
-// eslint-disable-next-line import/no-unresolved
-import DATAFASKES from '../data/faskes-sheets.json';
+const fetcher = url => fetch(url).then(res => res.json());
 
 export default function FasilitasKesehatan() {
   const siteInfo = {
@@ -19,20 +19,6 @@ export default function FasilitasKesehatan() {
     pageDescription: 'Kumpulan data fasilitas kesehatan yang terdapat di kota Sidoarjo',
     pageTitle: 'Data Fasilitas Kesehatan di Kota Sidoarjo',
   };
-  const componentList = [];
-
-  for (let i = 0; i < DATAFASKES.length; i += 1) {
-    componentList.push(
-      <CardFaskes
-        key={DATAFASKES[i].nama}
-        nama={DATAFASKES[i].nama}
-        hotline={DATAFASKES[i].kontak}
-        socialmedia={DATAFASKES[i].sosialmedia}
-        kategori={DATAFASKES[i].jenis}
-        alamat={DATAFASKES[i].alamat}
-      />
-    );
-  }
 
   return (
     <div id="home" className="text-gray-700">
@@ -49,9 +35,32 @@ export default function FasilitasKesehatan() {
       <Header title="Fasilitas Kesehatan" />
       <PageTitle title={siteInfo.pageTitle} description={siteInfo.pageDescription} />
       <SectionGrub title="Data Fasilitas Kesehatan">
-        <ul>{componentList}</ul>
+        <ul>
+          <CardFasilitasKesehatan />
+        </ul>
       </SectionGrub>
       <Footer />
     </div>
   );
+}
+
+function CardFasilitasKesehatan() {
+  const { data, error } = useSWR('/api/data/faskes', fetcher);
+  if (error) return <p className="text-lg text-red-600">Data Gagal Untuk Dimuat</p>;
+  if (!data) return <p className="text-lg justify-center mt-6">Data Sedang Dimuat...</p>;
+  const componentList = [];
+  for (let i = 0; i < data.length; i += 1) {
+    componentList.push(
+      <CardFaskes
+        key={data[i].nama}
+        nama={data[i].nama}
+        hotline={data[i].kontak}
+        socialmedia={data[i].sosialmedia}
+        kategori={data[i].jenis}
+        alamat={data[i].alamat}
+      />
+    );
+  }
+
+  return componentList;
 }
