@@ -6,12 +6,25 @@ class MyDocument extends Document {
     return (
       <Html lang="id">
         <Head>
+          {/* Default OpenGraph Meta tag */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://covid.sda.untukkita.my.id/" />
           <meta property="og:image" content="OpenGraph.jpg" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://covid.sda.untukkita.my.id/" />
           <meta property="twitter:image" content="OpenGraph.jpg" />
+
+          {/* Manifest Meta Tag */}
+          <link rel="manifest" href="manifest.json" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="application-name" content="Laman Informasi Vaksinasi" />
+          <meta name="apple-mobile-web-app-title" content="Laman Informasi Vaksinasi" />
+          <meta name="theme-color" content="#374151" />
+          <meta name="msapplication-navbutton-color" content="#374151" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta name="msapplication-starturl" content="/" />
+
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

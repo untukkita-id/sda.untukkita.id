@@ -1,12 +1,13 @@
 {
-  "name": "Untuk Kita Sidoarjo",
-  "short_name": "untukkita.sda",
-  "theme_color": " #374151",
-  "background_color": "#F3F4F6",
+  "name": "UntukKita -  Laman Informasi Vaksinasi COVID-19 Sidoarjo",
+  "short_name": "Laman Informasi Vaksinasi",
+  "description": "Situs ini merupakan proyek independen yang bertujuan untuk memberikan informasi vaksinasi serta fasilitas kesehatan yang ada di Kota Sidoarjo.",
+  "lang": "id",
+  "start_url": "/",
   "display": "browser",
   "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
+  "theme_color": "#374151",
+  "background_color": "#fff",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
