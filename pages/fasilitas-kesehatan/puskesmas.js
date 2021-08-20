@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import useSWR from 'swr';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import PageTitle from '../../components/page-title';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
