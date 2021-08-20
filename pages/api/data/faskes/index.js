@@ -1,3 +1,4 @@
+/* eslint no-console: ["error", { allow: ["info", "error"] }] */
 const fetch = require('cross-fetch');
 const fs = require('fs');
 require('dotenv').config();
@@ -42,13 +43,13 @@ export default function handler(req, res) {
         // Send the data to the client
         res.status(200).json(output);
         const perEnd = performance.now();
-        console.log(
+        console.info(
           `[PERFORMANCE] [ GET api/data/faskes ] : Request Successful in: ${perEnd - perSTart}ms`
         );
         resolve();
       })
       .catch(err => {
-        console.log(`[ERROR] An Error Has Been Occured \n ${err}`);
+        console.error(`[ERROR] An Error Has Been Occured \n ${err}`);
         return resolve();
       });
   });
