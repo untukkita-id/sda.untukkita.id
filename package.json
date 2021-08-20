@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "cross-env NODE_OPTIONS=--inspect next dev",
     "build": "yarn run fetch-data && next build",
     "start": "next start",
     "lint": "eslint \"**/*.{js,jsx}\" \"*.config.js\"",
