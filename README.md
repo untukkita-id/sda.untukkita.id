@@ -6,3 +6,4 @@ Situs ini merupakan proyek independen yang bertujuan untuk memberikan informasi 
 
 - [Instagram Account](https://www.instagram.com/untukkita.sda)
 - [Github Repository](https://github.com/untukkita-id/sda.untukkita.id)
+- [Data Source](https://docs.google.com/spreadsheets/d/1l1O7tE5rY4Uzaa66fX2ULw0wpPUZ-UH5YS7tvgrEWYg/edit?usp=sharing)
