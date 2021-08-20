@@ -21,7 +21,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1.2
         id: netlify
         with:
-          site_name: "4028acdf-88ba-4204-9ffe-2b79b1cd4b46"
+          site_name: "covid-sidoarjo"
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
 
