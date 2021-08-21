@@ -1,4 +1,5 @@
 **/faskes-sheets.json
+public/manifest.json
 **/package.json
 node_modules/
 out/
