@@ -1,0 +1,48 @@
+# Repository Configuration for the project
+.github/ @vzrenggamani
+.vscode/ @vzrenggamani
+.gitignore @vzrenggamani
+.gitattributes @vzrenggamani
+.husky/ @vzrenggamani
+
+# Project Documentation
+docs/ @vzrenggamani
+readme.md @vzrenggamani
+license @vzrenggamani
+contributing.md @vzrenggamani
+code_of_conduct.md @vzrenggamani
+
+# Project Configurations Setting
+# Environment Variables Settings
+.env @vzrenggamani
+.env.example @vzrenggamani
+.env.local @vzrenggamani
+.env.production @vzrenggamani
+.env.staging @vzrenggamani
+.env.test @vzrenggamani
+.env.development @vzrenggamani
+.env.docker @vzrenggamani
+.env.docker.production @vzrenggamani
+.env.docker.staging @vzrenggamani
+.env.docker.test @vzrenggamani
+.env.docker.development @vzrenggamani
+.env.docker.local @vzrenggamani
+
+# Project Deployment & CI/CD
+netlify.toml @vzrenggamani
+package.json @vzrenggamani
+.eslintrc.js @vzrenggamani
+.jscpd.json @vzrenggamani
+.prettierrc @vzrenggamani
+lighthouserc.js @vzrenggamani
+.commitlintrc.js @vzrenggamani
+
+# Project Core Files
+next.config.js @vzrenggamani
+tailwind.config.js @vzrenggamani
+postcss.config.js @vzrenggamani
+
+# Test Suite Folder
+test/ @vzrenggamani
+
+
