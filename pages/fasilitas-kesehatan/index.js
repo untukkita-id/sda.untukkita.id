@@ -10,13 +10,13 @@ import NavbarFaskes from '../../components/navbar-faskes';
 
 export default function FasilitasKesehatan({ dataFaskes }) {
   const siteInfo = {
-    title: 'UntukKita Sidoarjo - Daftar Fasilitas Kesehatan di Kota Sidoarjo',
+    title: 'UntukKita Sidoarjo - Daftar Rumah Sakit di Kota Sidoarjo',
     description:
-      'Daftar Fasilitas Kesehatan di kota Sidoarjo. Fasilitas Penunjang Kesembuhan COVID-19 kota Sidoarjo',
+      'Daftar Rumah Sakit di kota Sidoarjo. Fasilitas Penunjang Kesembuhan COVID-19 kota Sidoarjo',
     image: 'opengraph.jpg',
     url: 'https://covid.sda.untukkita.my.id',
-    pageDescription: 'Kumpulan data fasilitas kesehatan yang terdapat di kota Sidoarjo',
-    pageTitle: 'Data Fasilitas Kesehatan di Kota Sidoarjo',
+    pageDescription: 'Kumpulan data rumah sakit yang terdapat di kota Sidoarjo',
+    pageTitle: 'Data Rumah Sakit di Kota Sidoarjo',
   };
 
   const componentList = [];
@@ -45,10 +45,10 @@ export default function FasilitasKesehatan({ dataFaskes }) {
         <meta property="twitter:title" content={siteInfo.title} />
         <meta property="twitter:description" content={siteInfo.description} />
       </Head>
-      <Header title="Fasilitas Kesehatan" />
+      <Header title="Rumah Sakit" />
       <NavbarFaskes />
       <PageTitle title={siteInfo.pageTitle} description={siteInfo.pageDescription} />
-      <SectionGrub title="Data Fasilitas Kesehatan">
+      <SectionGrub title="Data Rumah Sakit">
         <ul>{componentList}</ul>
       </SectionGrub>
       <Footer />
