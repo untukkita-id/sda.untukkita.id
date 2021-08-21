@@ -9,7 +9,7 @@
     "format": "prettier --write \"./**/*.{js,jsx}\"",
     "prepare": "husky install",
     "test": "mocha",
-    "fetch-data": "node ./lib/faskes-fetcher.js",
+    "fetch-data": "node ./lib/faskes-fetcher.js && node ./lib/faskes-splitter.js",
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
