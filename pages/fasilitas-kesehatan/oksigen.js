@@ -8,8 +8,6 @@ import CardFaskes from '../../components/card-faskes';
 import SectionGrub from '../../components/sections';
 import NavbarFaskes from '../../components/navbar-faskes';
 
-const fetcher = url => fetch(url).then(res => res.json());
-
 export default function FasilitasKesehatan({ dataFaskes }) {
   const siteInfo = {
     title: 'UntukKita Sidoarjo - Daftar Oksigen di Kota Sidoarjo',
