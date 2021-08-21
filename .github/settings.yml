@@ -1,140 +1,140 @@
 labels:
-  - name: "PROJECT EPIC"
+  - name: "Epic"
     description: "Epic"
     color: "#d73a4a"
 
-  - name: "type:bug"
+  - name: "type-bug"
     color: "#CC0000"
     description: An issue with the system 🐛.
 
-  - name: "type:feature"
+  - name: "type-feature"
     color: "#009933"
     description: A feature request 📦.
 
-  - name: "type::testing"
+  - name: "type-testing"
     color: "#9933CC"
     description: An issue with the test suite 📦.
 
-  - name: "type: improvement"
+  - name: "type-improvement"
     color: "#FFCC00"
     description: An improvement to the system 🔨.
 
-  - name: "type: documentation"
+  - name: "type-documentation"
     color: "#0000FF"
     description: A request for documentation 📖.
 
-  - name: "type: question"
+  - name: "type-question"
     color: "#0066CC"
     description: A question about the system 💬.
 
-  - name: "type: refactor"
+  - name: "type-refactor"
     color: "#993399"
     description: A code change that neither fixes a bug nor adds a feature 🔨.
 
-  - name: "type: other"
+  - name: "type-other"
     color: "#000000"
     description: Other 🤷.
 
-  - name: "priority: critical"
+  - name: "priority-critical"
     color: "#CC0000"
     description: A critical issue 🔥.
 
-  - name: "priority: high"
+  - name: "priority-high"
     color: "#FFCC00"
     description: A high priority issue 🔥.
 
-  - name: "priority: medium"
+  - name: "priority-medium"
     color: "#FFCC00"
     description: A medium priority issue 🔥.
 
-  - name: "priority: low"
+  - name: "priority-low"
     color: "#009933"
     description: A low priority issue 🔥.
 
-  - name: "priority: trivial"
+  - name: "priority-trivial"
     color: "#0066CC"
     description: A trivial issue 🔥.
 
-  - name: "priority: other"
+  - name: "priority-other"
     color: "#000000"
     description: Other 🤷.
 
-  - name: "status: open"
+  - name: "status-open"
     color: "#0066CC"
     description: An open issue 🔥.
 
-  - name: "status: closed"
+  - name: "status-closed"
     color: "#CC0000"
     description: A closed issue 🔥.
 
-  - name: "status: merged"
+  - name: "status-merged"
     color: "#009933"
     description: A merged issue 🔥.
 
-  - name: "status: other"
+  - name: "status-other"
     color: "#000000"
     description: Other 🤷.
 
-  - name: "status: duplicate"
+  - name: "status-duplicate"
     color: "#FFCC00"
     description: A duplicate issue 🔥.
 
-  - name: "status: invalid"
+  - name: "status-invalid"
     color: "#FFCC00"
     description: An invalid issue 🔥.
 
-  - name: "status: wontfix"
+  - name: "status-wontfix"
     color: "#FFCC00"
     description: A wontfix issue 🔥.
 
-  - name: "status: verified"
+  - name: "status-verified"
     color: "#009933"
     description: A verified issue 🔥.
 
-  - name: "status: needs review"
+  - name: "status-needs-review"
     color: "#FFCC00"
     description: A needs review issue 🔥.
 
-  - name: "status: needs discussion"
+  - name: "status-needs-discussion"
     color: "#FFCC00"
     description: A needs discussion issue 🔥.
 
-  - name: "status: blcoked"
+  - name: "status-blcoked"
     color: "#FFCC00"
     description: A blocked issue 🔥.
 
-  - name: "scope: ux"
+  - name: "scope-ux"
     color: "#0066CC"
     description: A UX issue 🔥.
 
-  - name: "scope: ui"
+  - name: "scope-ui"
     color: "#0066CC"
     description: A User Interface issue 🔥.
 
-  - name: "scope: security"
+  - name: "scope-security"
     color: "#0066CC"
     description: A security issue 🔥.
 
-  - name: "scope: performance"
+  - name: "scope-performance"
     color: "#0066CC"
     description: A performance issue 🔥.
 
-  - name: "scope: other"
+  - name: "scope-other"
     color: "#000000"
     description: Other 🤷.
 
-  - name: "scope: dx"
+  - name: "scope-dx"
     color: "#0066CC"
     description: A Developer Experiece issue 🔥.
 
-  - name: "scope: ci/cd"
+  - name: "scope-ci-cd"
     color: "#0066CC"
     description: A CI/CD issue 🔥.
 
-  - name: "scope: seo"
+  - name: "scope-seo"
     color: "#0066CC"
     description: A SEO issue 🔥.
 
-  - name: "scope: accessibility"
+  - name: "scope-accessibility"
     color: "#0066CC"
     description: An accessibility issue 🔥.
