@@ -19,7 +19,6 @@ jobs:
           node-version: "14"
           cache: "yarn"
       - run: yarn install --frozen-lockfile
-      - run: yarn fetch-data
 
       - name: 💻 Run tests
         run: yarn run test
