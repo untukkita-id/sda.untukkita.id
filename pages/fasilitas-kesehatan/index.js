@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable global-require */
 import Head from 'next/head';
 import PageTitle from '../../components/page-title';
 import Footer from '../../components/footer';
@@ -55,7 +57,6 @@ export default function FasilitasKesehatan({ dataFaskes }) {
 }
 
 export async function getStaticProps() {
-  // eslint-disable-next-line global-require
   const dataFaskes = require('../../data/faskes-sheets.json');
   return {
     props: {
