@@ -1,6 +1,6 @@
+/* eslint-disable no-unreachable */
 /* eslint no-console: ["error", { allow: ["info", "error"] }] */
 const fetch = require('cross-fetch');
-const fs = require('fs');
 require('dotenv').config();
 const { performance } = require('perf_hooks');
 
@@ -8,7 +8,8 @@ const SHEETS_ENDPOINT = `https://sheets.googleapis.com/v4/spreadsheets/${process
 
 export default function handler(req, res) {
   const perSTart = performance.now();
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, rejects) => {
+    return rejects(new Error('Not implemented yet'));
     fetch(SHEETS_ENDPOINT)
       .then(response => response.json())
       .then(json => {
