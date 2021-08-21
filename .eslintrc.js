@@ -34,8 +34,8 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'no-undef': 'off',
-    'no-unused-vars': 'off',
+    'no-undef': 'warn',
+    'no-unused-vars': 'warn',
     'no-use-before-define': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
@@ -46,7 +46,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'no-console': 'error',
+    'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
   },
   settings: {
     'import/resolver': {

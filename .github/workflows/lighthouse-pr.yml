@@ -22,6 +22,7 @@ jobs:
         id: netlify
         with:
           site_name: "covid-sidoarjo"
+          max_timeout: 180
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
 

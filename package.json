@@ -9,7 +9,7 @@
     "format": "prettier --write \"./**/*.{js,jsx}\"",
     "prepare": "husky install",
     "test": "mocha",
-    "fetch-data": "node ./lib/faskes-fetcher.js",
+    "fetch-data": "node ./lib/faskes-fetcher.js && node ./lib/faskes-splitter.js",
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
@@ -27,6 +27,7 @@
     "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@next/bundle-analyzer": "^11.1.0",

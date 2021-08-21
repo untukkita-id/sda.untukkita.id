@@ -60,4 +60,10 @@ module.exports = withBundleAnalyzer({
     defaultLocale: 'id',
   },
   reactStrictMode: true,
+  compilerOptions: {
+    baseUrl: '.',
+    paths: {
+      '@/components/*': ['components/*'],
+    },
+  },
 });
