@@ -1,0 +1,18 @@
+import LayoutMarkdownPages from '../components/layout/markdownpages';
+
+export const meta = {
+  title: 'Hubungi Kami',
+  description: 'Kontak tim Untukkita.sda',
+  pageDescription: 'Kontak tim Untukkita.sda',
+  pageTitle: 'Hubungi Kami',
+};
+
+Saat ini, kami hanya bisa dihubungi melalui Direct Message Instagram. Kami hanya menerima pertanyaan terkait hal - hal teknis tentang pengembangan aplikasi, pengembangan situs, dan pengembangan konten lainnya.
+
+Untuk informasi terkait vaksinasi, fasilitas kesehatan dapat mengecek [Instagram @untukkita.sda](https://instagram.com/untukkita.sda).
+
+export default ({ children }) => (
+  <LayoutMarkdownPages title={meta.title} pageTitle={meta.pageTitle}>
+    {children}
+  </LayoutMarkdownPages>
+);
