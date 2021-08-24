@@ -15,7 +15,7 @@ module.exports = {
         // Blocking Assertions
         'dom-size': ['error', { maxNumericValue: 3000 }],
         'first-contentful-paint': ['error', { maxNumericValue: 1000 }],
-        'first-meaningful-paint': ['error', { maxNumericValue: 1000 }],
+        'first-meaningful-paint': ['error', { maxNumericValue: 1200 }],
         'max-potential-fid': ['error', { maxNumericValue: 1500 }],
 
         // Ignored Assertions
