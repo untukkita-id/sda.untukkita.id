@@ -25,7 +25,7 @@ module.exports = {
         'csp-xss': 'off',
         'legacy-javascript': 'off',
         'unused-javascript': 'off',
-        'is-crawable': 'off',
+        'is-crawlable': 'off',
         'uses-rel-preconnect': 'off',
       },
     },
