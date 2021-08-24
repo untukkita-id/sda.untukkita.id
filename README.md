@@ -11,7 +11,9 @@ In practice, we collect data (aggregation) from various credible sources, such a
 
 The core team for untukkita.sda itself consists of student volunteers from Sidoarjo and the community with backgrounds in technology and data. Currently, the team for untukkita.sda consists of 5 members. We welcome contributions from the community in improving our quality in helping the community both in the scope of data, relations and technology.
 
-# Getting Started
+Visit [UntukKita Sidoarjo Website](https://covid.sda.untukkita.id/)
+
+## Getting Started
 
 To get started running the project locally, please follow the steps below.
 
@@ -35,9 +37,26 @@ Finally, run the development server.
 yarn dev
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+Open <http://localhost:3000> with your browser to see the result.
 
-# Find us
+### Technical Details
+
+The project is built with [NextJS](https://nextjs.org//) and [Tailwind CSS](https://tailwindcss.com/).
+
+Project Dependencies and Environment:
+
+- [Node.js v14.x](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Netlify](https://www.netlify.com/)
+- [Git](https://git-scm.com/)
+- [GitHub Actions](https://help.github.com/en/actions)
+- [Font Awesome 5](https://fontawesome.com/v5.15/how-to-use/on-the-web/setup/using-package-managers)
+
+Any contributions are welcome. Please read the [contributing](contributing.md) file for more information.
+
+[![Deploys by Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com)
+
+## Find us
 
 - [Instagram Account](https://www.instagram.com/untukkita.sda)
 - [Github Repository](https://github.com/untukkita-id/sda.untukkita.id)
