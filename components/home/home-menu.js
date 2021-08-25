@@ -15,7 +15,7 @@ export default function HomeMenu() {
   ];
 
   let componentList = [];
-  componentList = menuItems.map((item, index) => {
+  componentList = menuItems.map(item => {
     return (
       <Link key={item.link} href={item.link} passHref>
         <div

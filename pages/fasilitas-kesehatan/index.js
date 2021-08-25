@@ -1,24 +1,37 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable global-require */
 import Head from 'next/head';
-import useSWR from 'swr';
-import PageTitle from '../../components/page-title';
-import Footer from '../../components/footer';
-import Header from '../../components/header';
-import CardFaskes from '../../components/card-faskes';
-import SectionGrub from '../../components/sections';
-import NavbarFaskes from '../../components/navbar-faskes';
+import PageTitle from 'components/page-title';
+import Footer from 'components/footer';
+import Header from 'components/header';
+import CardFaskes from 'components/card-faskes';
+import SectionGrub from 'components/sections';
+import NavbarFaskes from 'components/navbar-faskes';
 
-const fetcher = url => fetch(url).then(res => res.json());
-
-export default function FasilitasKesehatan() {
+export default function FasilitasKesehatan({ dataFaskes }) {
   const siteInfo = {
-    title: 'UntukKita Sidoarjo - Daftar Fasilitas Kesehatan di Kota Sidoarjo',
+    title: 'UntukKita Sidoarjo - Daftar Rumah Sakit di Kota Sidoarjo',
     description:
-      'Daftar Fasilitas Kesehatan di kota Sidoarjo. Fasilitas Penunjang Kesembuhan COVID-19 kota Sidoarjo',
+      'Daftar Rumah Sakit di kota Sidoarjo. Fasilitas Penunjang Kesembuhan COVID-19 kota Sidoarjo',
     image: 'opengraph.jpg',
     url: 'https://covid.sda.untukkita.my.id',
-    pageDescription: 'Kumpulan data fasilitas kesehatan yang terdapat di kota Sidoarjo',
-    pageTitle: 'Data Fasilitas Kesehatan di Kota Sidoarjo',
+    pageDescription: 'Kumpulan data rumah sakit yang terdapat di kota Sidoarjo',
+    pageTitle: 'Data Rumah Sakit di Kota Sidoarjo',
   };
+
+  const componentList = [];
+  for (let i = 0; i < dataFaskes.length; i += 1) {
+    componentList.push(
+      <CardFaskes
+        key={dataFaskes[i].nama}
+        nama={dataFaskes[i].nama}
+        hotline={dataFaskes[i].kontak}
+        socialmedia={dataFaskes[i].sosialmedia}
+        kategori={dataFaskes[i].jenis}
+        alamat={dataFaskes[i].alamat}
+      />
+    );
+  }
 
   return (
     <div id="home" className="text-gray-700">
@@ -32,36 +45,22 @@ export default function FasilitasKesehatan() {
         <meta property="twitter:title" content={siteInfo.title} />
         <meta property="twitter:description" content={siteInfo.description} />
       </Head>
-      <Header title="Fasilitas Kesehatan" />
+      <Header title="Rumah Sakit" />
       <NavbarFaskes />
       <PageTitle title={siteInfo.pageTitle} description={siteInfo.pageDescription} />
-      <SectionGrub title="Data Fasilitas Kesehatan">
-        <ul>
-          <CardFasilitasKesehatan />
-        </ul>
+      <SectionGrub title="Data Rumah Sakit">
+        <ul>{componentList}</ul>
       </SectionGrub>
       <Footer />
     </div>
   );
 }
 
-function CardFasilitasKesehatan() {
-  const { data, error } = useSWR('/api/data/faskes', fetcher);
-  if (error) return <p className="text-lg text-red-600">Data Gagal Untuk Dimuat</p>;
-  if (!data) return <p className="text-lg justify-center mt-6">Data Sedang Dimuat...</p>;
-  const componentList = [];
-  for (let i = 0; i < data.length; i += 1) {
-    componentList.push(
-      <CardFaskes
-        key={data[i].nama}
-        nama={data[i].nama}
-        hotline={data[i].kontak}
-        socialmedia={data[i].sosialmedia}
-        kategori={data[i].jenis}
-        alamat={data[i].alamat}
-      />
-    );
-  }
-
-  return componentList;
+export async function getStaticProps() {
+  const dataFaskes = require('../../data/faskes-sheets.json');
+  return {
+    props: {
+      dataFaskes,
+    },
+  };
 }

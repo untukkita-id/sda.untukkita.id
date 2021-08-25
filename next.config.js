@@ -2,6 +2,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
+
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com *.googletagmanager.com analytics.google.com;
@@ -46,18 +50,27 @@ const securityHeaders = [
   },
 ];
 
-module.exports = withBundleAnalyzer({
-  headers: async () => {
-    return [
-      {
-        source: '/(.*)',
-        headers: securityHeaders,
+module.exports = withBundleAnalyzer(
+  withMDX({
+    pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+    headers: async () => {
+      return [
+        {
+          source: '/(.*)',
+          headers: securityHeaders,
+        },
+      ];
+    },
+    i18n: {
+      locales: ['id'],
+      defaultLocale: 'id',
+    },
+    reactStrictMode: true,
+    compilerOptions: {
+      baseUrl: '.',
+      paths: {
+        '@/components/*': ['components/*'],
       },
-    ];
-  },
-  i18n: {
-    locales: ['id'],
-    defaultLocale: 'id',
-  },
-  reactStrictMode: true,
-});
+    },
+  })
+);

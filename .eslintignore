@@ -1,5 +1,6 @@
 **/faskes-sheets.json
 public/manifest.json
+jsconfig.json
 **/package.json
 node_modules/
 out/

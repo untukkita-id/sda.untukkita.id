@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import PageTitle from '../components/page-title';
-import Header from '../components/header';
-import Footer from '../components/footer';
+import PageTitle from 'components/page-title';
+import Header from 'components/header';
+import Footer from 'components/footer';
 
 export default function FasilitasKesehatan() {
   return (

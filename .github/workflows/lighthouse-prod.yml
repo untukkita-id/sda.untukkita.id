@@ -24,7 +24,7 @@ jobs:
           lhci collect --url=https://covid.sda.untukkita.my.id --url=https://covid.sda.untukkita.my.id/fasilitas-kesehatan -n=3
           echo -e "\n"
           echo "Lighthouse CI: Asserting Data"
-          lhci assert --config=./lighthouserc.js
+          lhci assert --config=./lighthouserc-prod.js
           echo -e "\n"
           echo "Lighthouse CI: Uploading Reports"
           lhci upload --target "temporary-public-storage" --githubAppToken "$LHCI_GITHUB_APP_TOKEN" --githubToken "$GITHUB_TOKEN"

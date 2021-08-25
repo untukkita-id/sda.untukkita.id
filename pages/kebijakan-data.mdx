@@ -1,0 +1,20 @@
+import LayoutMarkdownPages from 'components/layout/markdownpages';
+
+export const meta = {
+  title: 'Kebijakan Data dan Privasi',
+  description: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
+  pageDescription: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
+  pageTitle: 'Kebijakan Data dan Privasi',
+};
+
+Dalam pelaksanaannya, **UntukKita.sda** melakukan pengumpulan data (agregasi) dari berbagai sumber yang kredibel, seperti sosial media dinas atau pemerintah kota maupun unit instansi yang bersangkutan. **UntukKita.sda** melakukan validasi cepat terhadap informasi yang didapat dengan cara mencocokkan konten dan sumber data yang kredibel.
+
+**UntukKita.sda** tidak menerima imbalan dalam bentuk apapun dari pihak manapun. **UntukKita.sda** tidak akan pernah untuk menjual data yang didapat. Seluruh data yang dihimpun oleh **UntukKita.sda** dapat diakses dan disebarluaskan secara terbuka dan gratis. Penyebaran data tersebut dapat dilakukan dengan syarat mencantumkan **UntukKita.sda** sebagai sumber data serta tidak mengubah data sedikitpun. **UntukKita.sda** tidak bertanggung jawab jika terdapat data **UntukKita.sda** telah direkayasa oleh pihak luar untuk kepentingan pribadinya.
+
+Seluruh data dan informasi UntukKita.sda disebarluaskan di bawah lisensi [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.id) .
+
+export default ({ children }) => (
+  <LayoutMarkdownPages title={meta.title} pageTitle={meta.pageTitle}>
+    {children}
+  </LayoutMarkdownPages>
+);
