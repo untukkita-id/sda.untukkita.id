@@ -1,10 +1,9 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-const PageTitle = dynamic(() => import('../components/page-title'));
-const HomeMenu = dynamic(() => import('../components/home/home-menu'));
-const Footer = dynamic(() => import('../components/footer'));
-const Header = dynamic(() => import('../components/header'));
+import PageTitle from 'components/page-title';
+import HomeMenu from 'components/home/home-menu';
+import Footer from 'components/footer';
+import Header from 'components/header';
 
 export default function Home() {
   const siteInfo = {
