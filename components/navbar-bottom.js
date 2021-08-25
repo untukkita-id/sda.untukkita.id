@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faClinicMedical } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faClinicMedical, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 export default function NavbarButton() {
@@ -15,6 +15,12 @@ export default function NavbarButton() {
         <div className="flex flex-col flex-grow items-center justify-center p-2 pb-1 active:bg-gray-800 hover:bg-gray-700">
           <FontAwesomeIcon icon={faClinicMedical} size="lg" />
           <p>Faskes</p>
+        </div>
+      </Link>
+      <Link href="/tentang-kami" passHref>
+        <div className="flex flex-col flex-grow items-center justify-center p-2 pb-1 active:bg-gray-800 hover:bg-gray-700">
+          <FontAwesomeIcon icon={faInfoCircle} size="lg" />
+          <p>Informasi</p>
         </div>
       </Link>
     </nav>
