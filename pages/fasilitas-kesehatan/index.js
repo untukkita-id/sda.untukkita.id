@@ -1,12 +1,12 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable global-require */
 import Head from 'next/head';
-import PageTitle from '../../components/page-title';
-import Footer from '../../components/footer';
-import Header from '../../components/header';
-import CardFaskes from '../../components/card-faskes';
-import SectionGrub from '../../components/sections';
-import NavbarFaskes from '../../components/navbar-faskes';
+import PageTitle from 'components/page-title';
+import Footer from 'components/footer';
+import Header from 'components/header';
+import CardFaskes from 'components/card-faskes';
+import SectionGrub from 'components/sections';
+import NavbarFaskes from 'components/navbar-faskes';
 
 export default function FasilitasKesehatan({ dataFaskes }) {
   const siteInfo = {
