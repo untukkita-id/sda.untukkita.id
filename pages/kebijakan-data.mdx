@@ -1,8 +1,8 @@
 import LayoutMarkdownPages from 'components/layout/markdownpages';
 
 export const meta = {
-  title: 'Kebijakan Data dan Privasi',
-  description: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
+  metaTitle: 'Kebijakan Data dan Privasi - Untuk Kita Sda',
+  metaDescription: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
   pageDescription: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
   pageTitle: 'Kebijakan Data dan Privasi',
 };
@@ -14,7 +14,14 @@ Dalam pelaksanaannya, **UntukKita.sda** melakukan pengumpulan data (agregasi) da
 Seluruh data dan informasi UntukKita.sda disebarluaskan di bawah lisensi [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.id) .
 
 export default ({ children }) => (
-  <LayoutMarkdownPages title={meta.title} pageTitle={meta.pageTitle}>
+  <LayoutMarkdownPages
+    metaTitle={meta.metaTitle}
+    pageTitle={meta.pageTitle}
+    metaDescription={meta.metaDescription}
+    pageDescription={meta.pageDescription}
+  >
     {children}
   </LayoutMarkdownPages>
 );
+
+;
