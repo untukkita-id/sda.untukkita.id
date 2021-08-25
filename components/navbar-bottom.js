@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function NavbarButton() {
   return (
-    <nav className="fixed bottom-0 bg-gray-600 w-screen h-16 px-8 flex flex-row gap-4 justify-center text-white">
+    <nav className="fixed bottom-0 bg-gray-600 w-screen h-16 px-8 flex flex-row gap-4 justify-center text-white z-10">
       <Link href="/" passHref>
         <div className="flex flex-col flex-grow items-center justify-center p-2 pb-1 active:bg-gray-800 hover:bg-gray-700">
           <FontAwesomeIcon icon={faHome} size="lg" />
