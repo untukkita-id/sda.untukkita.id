@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="flex flex-col items-center gap-4 text-center">
         <h2 className="flex justify-center font-bold text-lg">covid.sidoarjo.untukkita.id</h2>
         <p>
-          Proyek Independen yang bertujuan memberikan informasi vaksinasi dan fasilitas kesehatan
-          yang ada di kota Sidoarjo.
+          Proyek Independen yang bertujuan memberikan informasi vaksinasi, fasilitas dan pelayanan
+          kesehatan yang ada di kota Sidoarjo.
         </p>
         <Link href="/kontak-kami" passHref>
           <p className="flex justify-center font-bold active:underline hover:underline">
