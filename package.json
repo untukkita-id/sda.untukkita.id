@@ -1,19 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--inspect next dev",
-    "build": "yarn run fetch-data && next build",
-    "start": "next start",
-    "lint": "eslint \"**/*.{js,jsx}\" \"*.config.js\"",
-    "lint:next": "next lint",
-    "format": "prettier --write \"./**/*.{js,jsx}\"",
     "prepare": "husky install",
-    "test": "mocha",
     "fetch-data": "node ./lib/faskes-fetcher.js && node ./lib/faskes-splitter.js",
+    "dev": "cross-env NODE_OPTIONS=--inspect next dev",
     "analyze": "cross-env ANALYZE=true next build",
-    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-    "netlify:deploy": "yarn build && next export"
+    "lint": "eslint \"**/*.{js,jsx}\" \"*.config.js\"",
+    "format": "prettier --write \"./**/*.{js,jsx}\"",
+    "test": "mocha",
+    "build": "yarn run fetch-data && next build",
+    "deploy": "yarn build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -26,7 +23,6 @@
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "swr": "^0.5.6",
     "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
@@ -34,7 +30,6 @@
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@next/bundle-analyzer": "^11.1.0",
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
     "autoprefixer": "^10.2.6",
     "cross-env": "^7.0.3",
     "cross-fetch": "^3.1.4",
@@ -43,7 +38,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "^11.1.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
