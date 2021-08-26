@@ -4,6 +4,7 @@ import PageTitle from 'components/page-title';
 import HomeMenu from 'components/home/home-menu';
 import Footer from 'components/footer';
 import Header from 'components/header';
+import Statistik from 'components/statistik';
 
 export default function Home() {
   const siteInfo = {
@@ -37,6 +38,7 @@ export default function Home() {
       <PageTitle title={siteInfo.pageTitle} description={siteInfo.pageDescription} />
       <main>
         <HomeMenu />
+        <Statistik />
       </main>
       <Footer />
     </div>
