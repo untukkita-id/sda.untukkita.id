@@ -67,6 +67,9 @@ module.exports = withBundleAnalyzer(
       optimizeImages: true,
       workerThreads: true,
     },
+    images: {
+      domains: ['netlify.com', 'www.netlify.com'],
+    },
     reactStrictMode: true,
     compilerOptions: {
       baseUrl: '.',

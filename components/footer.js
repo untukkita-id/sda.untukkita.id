@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -26,9 +27,11 @@ export default function Footer() {
           </p>
         </Link>
         <Link href="https://www.netlify.com" passHref>
-          <img
+          <Image
             src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"
             alt="Deploys by Netlify"
+            width="114"
+            height="51"
           />
         </Link>
       </div>
