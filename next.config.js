@@ -66,6 +66,11 @@ module.exports = withBundleAnalyzer(
       locales: ['id'],
       defaultLocale: 'id',
     },
+    experimental: {
+      optimizeCss: true,
+      optimizeImages: true,
+      workerThreads: true,
+    },
     reactStrictMode: true,
     compilerOptions: {
       baseUrl: '.',
