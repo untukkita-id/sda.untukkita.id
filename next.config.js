@@ -62,10 +62,6 @@ module.exports = withBundleAnalyzer(
         },
       ];
     },
-    i18n: {
-      locales: ['id'],
-      defaultLocale: 'id',
-    },
     experimental: {
       optimizeCss: true,
       optimizeImages: true,

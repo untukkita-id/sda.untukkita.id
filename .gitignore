@@ -36,7 +36,11 @@ yarn-error.log*
 **env
 env
 .eslintcache
-**/faskes-sheets.json
-**/**-sheets.json
 
+# Tooling Generated file
+data/**-sheets.json
 
+# Next.js Plugin Generated Files
+**/next/**
+robots.txt
+sitemap.xml
