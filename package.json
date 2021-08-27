@@ -6,9 +6,9 @@
     "dev": "cross-env NODE_OPTIONS=--inspect next dev",
     "analyze": "cross-env ANALYZE=true next build",
     "test": "mocha",
-    "build": "next build",
+    "build": "yarn fetch-data && next build",
     "postbuild": "next-sitemap",
-    "deploy": "yarn fetch-data && yarn build && next export",
+    "deploy": "yarn build && next export",
     "start": "next start"
   },
   "dependencies": {
