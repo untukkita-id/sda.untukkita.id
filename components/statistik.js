@@ -1,20 +1,18 @@
-import CardStatistik from 'components/card-statistik';
-
-export default function Statistik({ data }) {
-  <CardStatistik positif={data[0]} sembuh={data[1]} meninggal={data[2]} />;
-
+export default function StatistikCovidSidoarjo({ positif, sembuh, meninggal }) {
   return (
-    <li className="border-2 border-gray-700 rounded-lg mt-4 p-5">
-      <div className="rounded-md bg-gray-500 max-w-max">{CardStatistik}</div>
-    </li>
+    <>
+      <div className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100">
+        <h3 className="font-bold text-lg uppercase">Positif</h3>
+        <p className="mt-1">{positif}</p>
+      </div>
+      <div className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100">
+        <h3 className="font-bold text-lg uppercase">Positif</h3>
+        <p className="mt-1">{sembuh}</p>
+      </div>
+      <div className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100">
+        <h3 className="font-bold text-lg uppercase">Positif</h3>
+        <p className="mt-1">{meninggal}</p>
+      </div>
+    </>
   );
-}
-
-export async function getStaticProps() {
-  const data = require('../data/scraper-covidsda-sheets.json');
-  return {
-    props: {
-      data,
-    },
-  };
 }
