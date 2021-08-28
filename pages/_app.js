@@ -8,13 +8,14 @@ import {
   faPhone,
   faMapMarkerAlt,
   faClinicMedical,
+  faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import * as ga from '../lib/ga';
 
 config.autoA11y = true;
 
-library.add(faHome, faPhone, faMapMarkerAlt, faInstagram, faClinicMedical);
+library.add(faHome, faPhone, faMapMarkerAlt, faInstagram, faClinicMedical, faInfoCircle);
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

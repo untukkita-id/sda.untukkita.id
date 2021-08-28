@@ -9,36 +9,52 @@ module.exports = {
   extends: [
     'plugin:prettier/recommended',
     'prettier',
-    'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
+    'kentcdodds',
+    'kentcdodds/react',
+    'kentcdodds/jsx-a11y',
+    'plugin:@next/next/recommended',
     'plugin:import/recommended',
   ],
+  plugins: ['prettier'],
   parserOptions: {
     sourceType: 'module',
+    allowImportExportEverywhere: true,
     ecmaFeatures: {
       impliedStrict: true,
       jsx: true,
     },
   },
   rules: {
-    camelcase: 'off',
-    'dot-notation': 'off',
     'import/extensions': [
-      'error',
-      'ignorePackages',
+      'warn',
+      'never',
       {
         js: 'never',
         mjs: 'never',
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
+        css: 'ignorePackages',
+        json: 'ignorePackages',
+        md: 'ignorePackages',
       },
     ],
+    'import/default': 2,
+    'import/export': 2,
+    'import/namespace': 2,
+    'import/named': 2,
+    'import/newline-after-import': 2,
+    'import/no-unresolved': [2, { commonjs: true, amd: true }],
+    'import/no-extraneous-dependencies': 2,
+    'import/order': 'error',
+
     'no-undef': 'warn',
     'no-unused-vars': 'warn',
     'no-use-before-define': 'off',
+
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
+
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-curly-brace-presence': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.tsx'] }],
@@ -46,8 +62,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': ['off'],
     'react/prop-types': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'import/order': 'error',
+
     'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
   },
   settings: {

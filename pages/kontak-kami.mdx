@@ -1,8 +1,8 @@
 import LayoutMarkdownPages from 'components/layout/markdownpages';
 
 export const meta = {
-  title: 'Hubungi Kami',
-  description: 'Kontak tim Untukkita.sda',
+  metaTitle: 'Hubungi Kami - Untuk Kita Sidoarjo',
+  metaDescription: 'Kontak tim Untukkita.sda',
   pageDescription: 'Kontak tim Untukkita.sda',
   pageTitle: 'Hubungi Kami',
 };
@@ -11,8 +11,25 @@ Saat ini, kami hanya bisa dihubungi melalui Direct Message Instagram. Kami hanya
 
 Untuk informasi terkait vaksinasi, fasilitas kesehatan dapat mengecek [Instagram @untukkita.sda](https://instagram.com/untukkita.sda).
 
+## Pendaftaran Kontributor UntukKita.sda
+
+<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+
+<iframe
+  className="airtable-embed airtable-dynamic-height border-2 border-black"
+  src="https://airtable.com/embed/shrqv0a9lF6p7XBuz?backgroundColor=green"
+  frameBorder="0"
+  width="100%"
+  height="1274"
+></iframe>
+
 export default ({ children }) => (
-  <LayoutMarkdownPages title={meta.title} pageTitle={meta.pageTitle}>
+  <LayoutMarkdownPages
+    metaTitle={meta.metaTitle}
+    pageTitle={meta.pageTitle}
+    metaDescription={meta.metaDescription}
+    pageDescription={meta.pageDescription}
+  >
     {children}
   </LayoutMarkdownPages>
 );
