@@ -26,14 +26,14 @@ export default function Footer() {
             Tentang Kami
           </p>
         </Link>
-        <Link href="https://www.netlify.com" passHref>
+        <a href="https://www.netlify.com">
           <Image
             src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"
             alt="Deploys by Netlify"
             width="114"
             height="51"
           />
-        </Link>
+        </a>
       </div>
     </footer>
   );
