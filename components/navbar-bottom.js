@@ -17,7 +17,7 @@ export default function NavbarButton() {
           <p>Faskes</p>
         </div>
       </Link>
-      <Link href="/tentang-kami" passHref>
+      <Link href="/informasi" passHref>
         <div className="flex flex-col flex-grow items-center justify-center p-2 pb-1 active:bg-gray-800 hover:bg-gray-700">
           <FontAwesomeIcon icon={faInfoCircle} size="lg" />
           <p>Informasi</p>
