@@ -10,10 +10,10 @@ import SectionGrub from 'components/sections';
 import CardInformasi from 'components/card-informasi';
 
 export const meta = {
-  metaTitle: 'Hubungi Kami - Untuk Kita Sidoarjo',
-  metaDescription: 'Kontak tim Untukkita.sda',
-  pageDescription: 'Kontak tim Untukkita.sda',
-  pageTitle: 'Hubungi Kami',
+  metaTitle: 'UntukKita.sda - Kumpulan Informasi',
+  metaDescription: 'Ringkasan Informasi yang dikemas secara ringkas oleh tim UntukKita.sda.',
+  pageDescription: 'Ringkasan Informasi yang dikemas secara ringkas oleh tim UntukKita.sda.',
+  pageTitle: 'Kumpulan Informasi',
 };
 
 export default function Informasi({ data }) {
