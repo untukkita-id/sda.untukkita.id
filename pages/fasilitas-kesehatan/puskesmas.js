@@ -29,7 +29,7 @@ export default function FasilitasKesehatan({ dataFaskes }) {
         socialmedia={dataFaskes[i].sosialmedia}
         kategori={dataFaskes[i].jenis}
         alamat={dataFaskes[i].alamat}
-      />
+      />,
     );
   }
 

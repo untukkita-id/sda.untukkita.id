@@ -1,10 +1,19 @@
 {
   "private": true,
+  "homepage": "https://covid.sda.untukkita.my.id",
+  "engine": {
+    "node": "16"
+  },
+  "license": "Apache-2.0",
+  "author": "UntukKita-id <robot@untukkita.my.id> (https://untukkita.my.id/)",
   "scripts": {
     "prepare": "husky install",
     "fetch-data": "node ./lib/fetch-data.js",
     "dev": "cross-env NODE_OPTIONS=--inspect next dev",
     "analyze": "cross-env ANALYZE=true next build",
+    "format": "prettier --write \"./**/*.{js,jsx,html,json}\"",
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "lint:fix": "eslint --fix \"**/*.{js,jsx}\"",
     "test": "mocha",
     "build": "yarn fetch-data && next build",
     "postbuild": "next-sitemap",
@@ -12,24 +21,23 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.15",
-    "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^11.1.0",
     "@tailwindcss/typography": "^0.4.1",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "tailwindcss": "^2.2.4"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@mdx-js/loader": "^1.6.22",
     "@next/bundle-analyzer": "^11.1.0",
     "@next/eslint-plugin-next": "^11.1.0",
+    "@next/mdx": "^11.1.0",
     "autoprefixer": "^10.2.6",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.10",
@@ -54,7 +62,8 @@
     "next-mdx-remote": "^3.0.4",
     "next-sitemap": "^1.6.164",
     "postcss": "^8.3.5",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.8"
   },
   "husky": {
     "hooks": {
