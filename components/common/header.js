@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavbarButton from 'components/navbar-bottom';
+import NavbarButton from 'components/navigation/navbar-bottom';
 import Image from 'next/image';
 
 export default function Header({ title }) {

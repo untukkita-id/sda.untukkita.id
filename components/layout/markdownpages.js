@@ -1,8 +1,8 @@
 /* eslint-disable global-require */
 import Head from 'next/head';
-import PageTitle from 'components/page-title';
-import Footer from 'components/footer';
-import Header from 'components/header';
+import PageTitle from 'components/common/page-title';
+import Footer from 'components/common/footer';
+import Header from 'components/common/header';
 
 export default function LayoutMarkdownPages({
   children,
