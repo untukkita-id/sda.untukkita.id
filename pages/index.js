@@ -4,8 +4,9 @@ import PageTitle from 'components/page-title';
 import HomeMenu from 'components/home/home-menu';
 import Footer from 'components/footer';
 import Header from 'components/header';
+import StatistikCovidSidoarjo from 'components/statistik';
 
-export default function Home() {
+export default function Home({ dataStatistik }) {
   const siteInfo = {
     title: 'UntukKita Sidoarjo - Informasi Vaksinasi dan Fasilitas Kesehatann di Kota Sidoarjo',
     description:
@@ -36,9 +37,23 @@ export default function Home() {
       <Header title="Beranda" />
       <PageTitle title={siteInfo.pageTitle} description={siteInfo.pageDescription} />
       <main>
+        <StatistikCovidSidoarjo
+          positif={dataStatistik.positif}
+          meninggal={dataStatistik.meninggal}
+          sembuh={dataStatistik.sembuh}
+        />
         <HomeMenu />
       </main>
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const dataStatistik = require('data/scraper-covidsda-sheets.json');
+  return {
+    props: {
+      dataStatistik,
+    },
+  };
 }
