@@ -48,6 +48,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 2,
     'import/order': 'error',
 
+    'no-shadow': 'off',
     'no-undef': 'warn',
     'no-unused-vars': 'warn',
     'no-use-before-define': 'off',

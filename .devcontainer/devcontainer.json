@@ -1,5 +1,3 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/javascript-node
 {
   "name": "Node.js",
   "build": {
@@ -8,7 +6,17 @@
   },
 
   "settings": {},
-  "extensions": ["dbaeumer.vscode-eslint"],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "wix.vscode-import-cost",
+    "davidanson.vscode-markdownlint",
+    "silvenon.mdx",
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "redhat.vscode-yaml",
+    "visualstudioexptteam.vscodeintellicode"
+  ],
   "forwardPorts": [3000],
   "postCreateCommand": "yarn install",
   "remoteUser": "node"
