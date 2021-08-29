@@ -1,16 +1,22 @@
+import PageBuilder from 'components/layout/pageBuilder';
 import Link from 'next/link';
-import PageTitle from 'components/page-title';
-import Header from 'components/header';
-import Footer from 'components/footer';
 
 export default function Kontak() {
+  const siteInfo = {
+    title: 'Daftar kontak darurat terkait COVID-19 untuk kota Sidoarjo.',
+    description: 'Daftar kontak darurat terkait COVID-19 untuk kota Sidoarjo.',
+    pageDescription: 'Daftar kontak darurat terkait COVID-19 untuk kota Sidoarjo.',
+    pageTitle: 'Daftar kontak darurat terkait COVID-19 untuk kota Sidoarjo.',
+    headerTitle: 'Kontak Darurat',
+  };
   return (
-    <div id="page-kontak">
-      <Header title="Kontak Darurat" />
-      <PageTitle
-        title="Kontak Darurat COVID-19 Sidoarjo"
-        description="Daftar kontak darurat terkait COVID-19 untuk kota Sidoarjo."
-      />
+    <PageBuilder
+      metaTitle={siteInfo.title}
+      metaDescription={siteInfo.description}
+      pageTitle={siteInfo.pageTitle}
+      pageDescription={siteInfo.pageDescription}
+      headerTitle={siteInfo.headerTitle}
+    >
       <div className="px-8 flex flex-col gap-4">
         <Link href="tel:119" passHref>
           <div className="border-4 border-red-900 bg-red-600 rounded-lg mt-4 p-5 text-white active:bg-red-800 hover:bg-red-700 hover:underline active:font-bold cursor-pointer">
@@ -39,7 +45,6 @@ export default function Kontak() {
           </div>
         </Link>
       </div>
-      <Footer />
-    </div>
+    </PageBuilder>
   );
 }

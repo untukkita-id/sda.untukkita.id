@@ -1,18 +1,19 @@
-/* eslint-disable global-require */
 import Head from 'next/head';
+
 import PageTitle from 'components/common/page-title';
 import Footer from 'components/common/footer';
 import Header from 'components/common/header';
 
-export default function LayoutMarkdownPages({
+export default function PageBuilder({
   children,
   metaTitle,
   metaDescription,
   pageTitle,
   pageDescription,
+  headerTitle,
 }) {
   return (
-    <div id="home" className="text-gray-700">
+    <>
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -23,10 +24,10 @@ export default function LayoutMarkdownPages({
         <meta property="twitter:title" content={metaTitle} />
         <meta property="twitter:description" content={metaDescription} />
       </Head>
-      <Header title={pageTitle} />
+      <Header title={headerTitle} />
       <PageTitle title={pageTitle} description={pageDescription} />
-      <article className="py-4 px-8 prose prose-blue prose-lg">{children}</article>
+      {children}
       <Footer />
-    </div>
+    </>
   );
 }
