@@ -45,7 +45,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body>
+        <body className="text-gray-700">
           <Main />
           <NextScript />
         </body>

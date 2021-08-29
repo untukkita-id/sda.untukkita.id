@@ -1,19 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Head from 'next/head';
 
-import PageTitle from 'components/page-title';
-import Footer from 'components/footer';
-import Header from 'components/header';
-import SectionGrub from 'components/sections';
-import CardInformasi from 'components/card-informasi';
+import PageBuilder from 'components/layout/pageBuilder';
+import SectionGrub from 'components/common/sections';
+import CardInformasi from 'components/card/card-informasi';
 
-export const meta = {
+export const siteInfo = {
   metaTitle: 'UntukKita.sda - Kumpulan Informasi',
   metaDescription: 'Ringkasan Informasi yang dikemas secara ringkas oleh tim UntukKita.sda.',
   pageDescription: 'Ringkasan Informasi yang dikemas secara ringkas oleh tim UntukKita.sda.',
   pageTitle: 'Kumpulan Informasi',
+  headerTitle: 'Ringkasan Informasi',
 };
 
 export default function Informasi({ data }) {
@@ -30,24 +28,17 @@ export default function Informasi({ data }) {
     );
   });
   return (
-    <div id="home" className="text-gray-700">
-      <Head>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.metaDescription} />
-        <meta name="title" content={meta.metaTitle} />
-        <meta property="og:url" content="https://covid.sda.untukkita.my.id/" />
-        <meta property="og:title" content={meta.metaTitle} />
-        <meta property="og:description" content={meta.metaDescription} />
-        <meta property="twitter:title" content={meta.metaTitle} />
-        <meta property="twitter:description" content={meta.metaDescription} />
-      </Head>
-      <Header title={meta.pageTitle} />
-      <PageTitle title={meta.pageTitle} description={meta.pageTitle} />
+    <PageBuilder
+      metaTitle={siteInfo.title}
+      metaDescription={siteInfo.description}
+      pageTitle={siteInfo.pageTitle}
+      pageDescription={siteInfo.pageDescription}
+      headerTitle={siteInfo.headerTitle}
+    >
       <SectionGrub title="Informasi Umum">
         <ul>{informationList}</ul>
       </SectionGrub>
-      <Footer />
-    </div>
+    </PageBuilder>
   );
 }
 
