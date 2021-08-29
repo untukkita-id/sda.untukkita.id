@@ -26,7 +26,7 @@ export default function Informasi({ data }) {
         title={frontmatter.title}
         description={frontmatter.description}
         slug={slug}
-      />
+      />,
     );
   });
   return (

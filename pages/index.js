@@ -50,6 +50,7 @@ export default function Home({ dataStatistik }) {
 }
 
 export async function getStaticProps() {
+  // eslint-disable-next-line import/no-unresolved
   const dataStatistik = require('data/scraper-covidsda-sheets.json');
   return {
     props: {

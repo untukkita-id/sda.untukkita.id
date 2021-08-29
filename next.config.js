@@ -77,5 +77,5 @@ module.exports = withBundleAnalyzer(
         '@/components/*': ['components/*'],
       },
     },
-  })
+  }),
 );

@@ -44,10 +44,8 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const paths = postFilePaths
-    // Remove file extensions for page paths
     // eslint-disable-next-line no-shadow
     .map(path => path.replace(/\.mdx?$/, ''))
-    // Map the path into the static paths object required by Next.js
     .map(slug => ({ params: { slug } }));
 
   return {
