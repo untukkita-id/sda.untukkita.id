@@ -1,14 +1,10 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable global-require */
-import Head from 'next/head';
-import PageTitle from 'components/page-title';
-import Footer from 'components/footer';
-import Header from 'components/header';
-import CardFaskes from 'components/card-faskes';
-import SectionGrub from 'components/sections';
-import NavbarFaskes from 'components/navbar-faskes';
+import PageBuilder from 'components/layout/pageBuilder';
+import SectionGrub from 'components/common/sections';
+import CardVaksinasi from 'components/card/card-vaksinasi';
 
-export default function FasilitasKesehatan({ dataFaskes }) {
+export default function FasilitasKesehatan({ dataVaksinasi }) {
   const siteInfo = {
     title: 'UntukKita Sidoarjo - Daftar Vaksinasi di Kota Sidoarjo',
     description:
@@ -20,47 +16,41 @@ export default function FasilitasKesehatan({ dataFaskes }) {
   };
 
   const componentList = [];
-  for (let i = 0; i < dataFaskes.length; i += 1) {
+  for (let i = 0; i < dataVaksinasi.length; i += 1) {
     componentList.push(
-      <CardFaskes
-        key={dataFaskes[i].peyelengara}
-        nama={dataFaskes[i].peyelengara}
-        hotline={dataFaskes[i].narahubung}
-        socialmedia={dataFaskes[i].sosialmedia_peyelenggara}
-        kategori={dataFaskes[i].jenis_vaksin}
-        alamat={dataFaskes[i].tempat_peyelengaraan}
-      />
+      <CardVaksinasi
+        key={dataVaksinasi[i].peyelengara}
+        peyelengara={dataVaksinasi[i].peyelengara}
+        pelaksanaan={dataVaksinasi[i].pelaksanaan}
+        sosialmedia_peyelenggara={dataVaksinasi[i].sosialmedia_peyelenggara}
+        jenis_vaksin={dataVaksinasi[i].jenis_vaksin}
+        tempat_peyelengaraan={dataVaksinasi[i].tempat_peyelengaraan}
+      />,
     );
   }
 
   return (
-    <div id="home" className="text-gray-700">
-      <Head>
-        <title>{siteInfo.title}</title>
-        <meta name="description" content={siteInfo.description} />
-        <meta name="title" content={siteInfo.title} />
-        <meta property="og:url" content="https://covid.sda.untukkita.my.id/" />
-        <meta property="og:title" content={siteInfo.title} />
-        <meta property="og:description" content={siteInfo.description} />
-        <meta property="twitter:title" content={siteInfo.title} />
-        <meta property="twitter:description" content={siteInfo.description} />
-      </Head>
-      <Header title="Vaksinasi" />
-      <NavbarFaskes />
-      <PageTitle title={siteInfo.pageTitle} description={siteInfo.pageDescription} />
-      <SectionGrub title="Data Vaksinasi">
-        <ul>{componentList}</ul>
-      </SectionGrub>
-      <Footer />
-    </div>
+    <PageBuilder
+      metaTitle={siteInfo.title}
+      metaDescription={siteInfo.description}
+      pageTitle={siteInfo.pageTitle}
+      pageDescription={siteInfo.pageDescription}
+      headerTitle={siteInfo.headerTitle}
+    >
+      <div id="home" className="text-gray-700">
+        <SectionGrub title="Data Vaksinasi">
+          <ul>{componentList}</ul>
+        </SectionGrub>
+      </div>
+    </PageBuilder>
   );
 }
 
 export async function getStaticProps() {
-  const dataFaskes = require('../data/vaksinasi-sheets.json');
+  const dataVaksinasi = require('data/vaksinasi-sheets.json');
   return {
     props: {
-      dataFaskes,
+      dataVaksinasi,
     },
   };
 }
