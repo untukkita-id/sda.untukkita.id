@@ -7,10 +7,7 @@ import CardVaksinasi from 'components/card/card-vaksinasi';
 export default function FasilitasKesehatan({ dataVaksinasi }) {
   const siteInfo = {
     title: 'UntukKita Sidoarjo - Daftar Vaksinasi di Kota Sidoarjo',
-    description:
-      'Daftar Vaksinasi di kota Sidoarjo. Fasilitas Penunjang Kesembuhan COVID-19 kota Sidoarjo',
-    image: 'opengraph.jpg',
-    url: 'https://covid.sda.untukkita.my.id',
+    description: 'Kumpulan data vaksinasi yang terdapat di kota Sidoarjo',
     pageDescription: 'Kumpulan data vaksinasi yang terdapat di kota Sidoarjo',
     pageTitle: 'Vaksinasi Sakit di Kota Sidoarjo',
     headerTitle: 'Vaksinasi',
