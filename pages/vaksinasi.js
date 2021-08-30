@@ -13,6 +13,7 @@ export default function FasilitasKesehatan({ dataVaksinasi }) {
     url: 'https://covid.sda.untukkita.my.id',
     pageDescription: 'Kumpulan data vaksinasi yang terdapat di kota Sidoarjo',
     pageTitle: 'Vaksinasi Sakit di Kota Sidoarjo',
+    headerTitle: 'Vaksinasi',
   };
 
   const componentList = [];
