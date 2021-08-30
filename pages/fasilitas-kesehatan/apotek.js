@@ -1,12 +1,12 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-unresolved */
 import Head from 'next/head';
-import PageTitle from 'components/page-title';
-import Footer from 'components/footer';
-import Header from 'components/header';
-import CardFaskes from 'components/card-faskes';
-import SectionGrub from 'components/sections';
-import NavbarFaskes from 'components/navbar-faskes';
+import PageTitle from 'components/common/page-title';
+import Footer from 'components/common/footer';
+import Header from 'components/common/header';
+import CardFaskes from 'components/card/card-faskes';
+import SectionGrub from 'components/common/sections';
+import NavbarFaskes from 'components/navigation/navbar-faskes';
 
 export default function FasilitasKesehatan({ dataFaskes }) {
   const siteInfo = {
@@ -29,7 +29,7 @@ export default function FasilitasKesehatan({ dataFaskes }) {
         socialmedia={dataFaskes[i].sosialmedia}
         kategori={dataFaskes[i].jenis}
         alamat={dataFaskes[i].alamat}
-      />
+      />,
     );
   }
 

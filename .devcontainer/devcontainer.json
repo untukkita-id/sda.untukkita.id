@@ -1,0 +1,23 @@
+{
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": { "VARIANT": "16" }
+  },
+
+  "settings": {},
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "wix.vscode-import-cost",
+    "davidanson.vscode-markdownlint",
+    "silvenon.mdx",
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "redhat.vscode-yaml",
+    "visualstudioexptteam.vscodeintellicode"
+  ],
+  "forwardPorts": [3000],
+  "postCreateCommand": "yarn install",
+  "remoteUser": "node"
+}

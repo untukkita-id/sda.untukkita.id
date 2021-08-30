@@ -4,7 +4,7 @@
     {
       "type": "node",
       "request": "attach",
-      "name": "Attach to application",
+      "name": "ATTACH TO: covid.sda.untukkita.my.id",
       "skipFiles": ["<node_internals>/**"],
       "port": 9229
     }

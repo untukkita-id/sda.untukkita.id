@@ -6,7 +6,7 @@
     X-Frame-Options = 'SAMEORIGIN'
     X-XSS-Protection = '1; mode=block'
     Strict-Transport-Security = 'max-age=31536000; includeSubDomains; preload'
-    Content-Security-Policy = "default-src 'self'; connect-src 'self' www.google-analytics.com analytics.google.com stats.g.doubleclick.net;  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com *.googletagmanager.com analytics.google.com;  img-src 'self' blob: data: https:;  style-src 'self' 'unsafe-inline'; object-src 'none';"
+    Content-Security-Policy = "default-src 'self'; connect-src 'self' www.google-analytics.com analytics.google.com stats.g.doubleclick.ne covid.sda.untukkita.my.id;  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com *.googletagmanager.com analytics.google.com *.airtable.com unpkg.com;  img-src 'self' blob: data: https:;  style-src 'self' 'unsafe-inline'; object-src 'none'; frame-src 'self' https://*.airtable.com airtable.com;"
     Referrer-Policy = 'no-referrer'
     Permissions-Policy = 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
 

@@ -16,20 +16,18 @@ jobs:
       - name: Setup NodeJS Environment
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
           cache: "yarn"
       - run: yarn install --frozen-lockfile
 
       - name: Linting Codebase
         uses: docker://ghcr.io/github/super-linter:slim-v4
         env:
-          IGNORE_GITIGNORED_FILES: TRUE
-          VALIDATE_ALL_CODEBASE: TRUE
-          VALIDATE_JAVASCRIPT_STANDARD: FALSE
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_BASH: FALSE
-          VALIDATE_BASH_EXEC: FALSE
           LINTER_RULES_PATH: /
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.js
           MARKDOWN_CONFIG_FILE: .markdownlint.json
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IGNORE_GITIGNORED_FILES: TRUE
+          VALIDATE_JAVASCRIPT_ES: TRUE
+          VALIDATE_MARKDOWN: TRUE

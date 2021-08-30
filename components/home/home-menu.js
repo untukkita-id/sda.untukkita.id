@@ -8,9 +8,9 @@ export default function HomeMenu() {
       link: '/fasilitas-kesehatan',
     },
     {
-      title: 'Layanan Kesehatan',
-      description: 'Daftar Layanan Ambulance, Oksigen, dan Ambulance',
-      link: '/layanan-kesehatan',
+      title: 'Agregator Vaksinasi',
+      description: 'Daftar Vaksinasi Puskesmas di Sidoarjo',
+      link: '/vaksinasi',
     },
   ];
 
@@ -20,7 +20,7 @@ export default function HomeMenu() {
       <Link key={item.link} href={item.link} passHref>
         <div
           key={item.link}
-          className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100"
+          className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100 active:outline-black"
         >
           <h3 className="font-bold text-lg uppercase">{item.title}</h3>
           <p className="mt-1">{item.description}</p>

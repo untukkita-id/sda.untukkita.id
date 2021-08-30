@@ -12,7 +12,7 @@ jobs:
       - name: Setup Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: "16.x"
 
       - name: Install
         run: yarn install --frozen-lockfile
@@ -31,7 +31,7 @@ jobs:
           yarn global add @lhci/cli@0.8.x
           echo -e "\n"
           echo "Lighthouse CI: Collecting URLs"
-          lhci collect --url=${{ steps.netlify.outputs.url }} --url=${{ steps.netlify.outputs.url }}/fasilitas-kesehatan -n=3
+          lhci collect --url=${{ steps.netlify.outputs.url }} --url=${{ steps.netlify.outputs.url }}/fasilitas-kesehatan --url=${{ steps.netlify.outputs.url }}/informasi  -n=3
           echo -e "\n"
           echo "Lighthouse CI: Asserting Data"
           lhci assert --config=./lighthouserc-pr.js

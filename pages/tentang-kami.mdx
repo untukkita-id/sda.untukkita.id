@@ -1,10 +1,10 @@
 import LayoutMarkdownPages from 'components/layout/markdownpages';
 
 export const meta = {
-  title: 'Tentang Kami',
-  description: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
+  metaTitle: 'Tentang Kami - Untuk Kita Sidoarjo',
+  metaDescription: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
+  pageTitle: 'Tentang Kami',
   pageDescription: 'Deskripsi Singkat tentang Proyek Untukkita Sidoarjo.',
-  pageTitle: 'Tentang Kami - Untuk Kita Sidoarjo',
 };
 
 **untukkita.sda** merupakan sebuah inisiatif untuk informasi vaksinsi dan layanan kesehatan yang dibutuhkan masyarakat Sidoarjo di masa pandemi. Berdasarkan pengamatan cepat yang kami lakukan, mendapatkan hasil bahwa masih belum ada portal yang berfokus pada penyediaan informasi vaksinasi dan layanan kesehatan. Dari hal inilah kami memiliki inisiatif untuk membuat sebuah portal yang dapat memudahkan masyarakat dalam mendapatkan informasi vaksinasi dan layanan kesehatan COVID-19.
@@ -17,6 +17,11 @@ Tim **untukkita.sda** sendiri terdiri dari relawan mahasiswa yang berasal dari s
 
 Baca juga [Kebijakan data dan privasi](/kebijakan-data) untukkita.sda.
 
+## Pranala Penting
+
+- [Daftar Menjadi Kontributor](/kontak-kami)
+- [Kebijakan Data dan Privasi](/kebijakan-data)
+
 ## Temukan Kami
 
 - [Instagram Account](https://www.instagram.com/untukkita.sda)
@@ -24,7 +29,12 @@ Baca juga [Kebijakan data dan privasi](/kebijakan-data) untukkita.sda.
 - [Data Source](https://docs.google.com/spreadsheets/d/1l1O7tE5rY4Uzaa66fX2ULw0wpPUZ-UH5YS7tvgrEWYg/edit?usp=sharing)
 
 export default ({ children }) => (
-  <LayoutMarkdownPages title={meta.title} pageTitle={meta.pageTitle}>
+  <LayoutMarkdownPages
+    metaTitle={meta.metaTitle}
+    pageTitle={meta.pageTitle}
+    metaDescription={meta.metaDescription}
+    pageDescription={meta.pageDescription}
+  >
     {children}
   </LayoutMarkdownPages>
 );
