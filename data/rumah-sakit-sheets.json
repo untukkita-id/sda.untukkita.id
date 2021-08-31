@@ -1,0 +1,135 @@
+[
+  {
+    "nama": "RSUD Sidoarjo",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8961649",
+    "alamat": "Jalan Mojopahit No.667, Sidowayah, Celep, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61215",
+    "sosialmedia": "rsudsda"
+  },
+  {
+    "nama": "RS Siti Hajar",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8943066",
+    "alamat": "Jalan Raden Patah No.70 - 72, Jasem, Bulusidokare, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61234",
+    "sosialmedia": "rsisitihajar_official"
+  },
+  {
+    "nama": "RS Mitra Keluarga",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8546996",
+    "alamat": "Jalan Jenderal S. Parman No.8, Krajan Kulon, Waru, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256        ",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Anwar Medika\t",
+    "jenis": "rumah-sakit",
+    "kontak": "081232107651",
+    "alamat": "Jalan Bypass Krian No.KM, Semawut, Balongbendo, Kec. BalongBendo, Kabupaten Sidoarjo, Jawa Timur 61263\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Arafah Anwar Medika Sukodono\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8832302\r",
+    "alamat": "Jalan Sawo No.2, Dungus, Sukodono, Sukodono, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61258        ",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Aisyiyah Siti Fatimah        ",
+    "jenis": "rumah-sakit",
+    "kontak": "081216649450",
+    "alamat": "Jalan Raya Kenongo No.14, Kenongo, Kec. Tulangan, Kabupaten Sidoarjo, Jawa Timur 61273\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Citra Medika\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(0321) 366400",
+    "alamat": "Jalan Raya Surabaya - Madiun KM.44, Kramat, Kramat Temenggung, Kec. Tarik, Kabupaten Sidoarjo, Jawa Timur 61265\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Siti Khodijah Muhammadiyah Cabang Sepanjang\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 7883980\r",
+    "alamat": "Jalan Raya Bebekan, Bebekan, Kec. Taman, Kabupaten Sidoarjo, Jawa Timur 61257\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Bhayangkara Pusdik Sabhara Porong\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(0343) 856444",
+    "alamat": "Jalan Raya Porong No.1, Porong, Kec. Porong, Kabupaten Sidoarjo, Jawa Timur 61274\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Rahman Rahim\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8830010",
+    "alamat": "Jalan Raya Saimbang No.10, Kebonagung, Kec. Sukodono, Kabupaten Sidoarjo, Jawa Timur 61258\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Umum Al-Islam H.M. Mawardi        ",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8987330",
+    "alamat": "Jalan Kyai Mojo No.12 A, Dusun Jeruk, Jerukgamping, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61262\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Mitra Sehat Mandiri\t",
+    "jenis": "rumah-sakit",
+    "kontak": "082133973949",
+    "alamat": "Jalan Krian-Mojosari No.KM, RW.3, Balepanjang, Tropodo, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61264\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Mitra Keluarga - Pondok Candra        ",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 99691111",
+    "alamat": "Jalan Raya Taman Asri Kav. DD No. 1-8, Tambaksumur, Waru, Sidoarjo Regency, East Java 61256\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Delta Surya\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8922522",
+    "alamat": "Jalan Pahlawan No.9, Jati, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61211\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Islam Aminah\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 99890993",
+    "alamat": "Jalan Soenandar Priyo Sudarmo, Watutulis Utara, Watutulis, Kec. Prambon, Kabupaten Sidoarjo, Jawa Timur 61264\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Sheila Medika\t",
+    "jenis": "rumah-sakit",
+    "kontak": "082244251088",
+    "alamat": "Jalan Letjen Wahono No.77-79 ( bypass Juanda Baru, Sedati Gede, Sedati, Sidoarjo Regency, East Java 61253\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS DKT Sidoarjo\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(0341) 8964610\r",
+    "alamat": "Jalan Dr. Soetomo No.2, Gajah Timur, Magersari, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61212\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Umum Prima Husada\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8684193\r",
+    "alamat": "Jalan Letjen Suprapto No.3, Kundi, Kepuhkiriman, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256\t",
+    "sosialmedia": "Belum Tersedia"
+  },
+  {
+    "nama": "RS Ibu dan Anak Pondok Tjandra\t",
+    "jenis": "rumah-sakit",
+    "kontak": "(031) 8664488\r",
+    "alamat": "Jalan Mangga I No.E-225,, Perumahan Pondok Tjandra, Tambaksumur, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256        ",
+    "sosialmedia": "Belum Tersedia"
+  }
+]
