@@ -3,27 +3,27 @@ import Link from 'next/link';
 export default function CardTautan() {
   const menuItems = [
     {
-      title: 'Fasilitas Kesehatan',
+      title: 'Beranda',
+      link: '/',
+    },
+    {
+      title: 'Daftar Fasilitas Kesehatan',
       link: '/fasilitas-kesehatan',
     },
     {
-      title: 'Agregator Vaksinasi',
-      link: '/vaksinasi',
+      title: 'Kumpulan Informasi',
+      link: '/informasi',
     },
     {
-      title: 'Agregator Vaksinasi',
-      link: '/vaksinasi',
+      title: 'Formulir: Menjadi Relawan',
+      link: 'https://airtable.com/shrqv0a9lF6p7XBuz',
     },
     {
-      title: 'Agregator Vaksinasi',
-      link: '/vaksinasi',
+      title: 'Formulir: Kontak Aduan',
+      link: 'https://airtable.com/shr6zXgSN0FIetWrn',
     },
     {
-      title: 'Agregator Vaksinasi',
-      link: '/vaksinasi',
-    },
-    {
-      title: 'Agregator Vaksinasi',
+      title: 'Data Vaksinasi',
       link: '/vaksinasi',
     },
   ];
@@ -34,9 +34,9 @@ export default function CardTautan() {
       <Link key={item.link} href={item.link} passHref>
         <div
           key={item.link}
-          className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100 active:outline-black"
+          className="flex flex-col border-2 border-gray-700 rounded-lg p-4 active:bg-gray-200 hover:bg-gray-100 active:outline-black hover:cursor-pointer"
         >
-          <h3 className="font-bold text-lg uppercase">{item.title}</h3>
+          <h3 className="font-bold text-lg">{item.title}</h3>
         </div>
       </Link>
     );
