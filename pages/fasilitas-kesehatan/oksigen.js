@@ -57,7 +57,7 @@ export default function FasilitasKesehatan({ dataFaskes }) {
 }
 
 export async function getStaticProps() {
-  const dataFaskes = require('../../data/oksigen-sheets.json');
+  const dataFaskes = require('data/oksigen-sheets.json');
   return {
     props: {
       dataFaskes,
