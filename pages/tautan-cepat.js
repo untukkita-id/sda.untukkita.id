@@ -5,11 +5,11 @@ import CardTautan from 'components/card/card-tautan';
 
 export default function TautanCepat() {
   const siteInfo = {
-    title: 'UntukKita Sidoarjo - Daftar Vaksinasi di Kota Sidoarjo',
-    description: 'Kumpulan data vaksinasi yang terdapat di kota Sidoarjo',
-    pageDescription: 'Kumpulan data vaksinasi yang terdapat di kota Sidoarjo',
-    pageTitle: 'Vaksinasi Sakit di Kota Sidoarjo',
-    headerTitle: 'Vaksinasi',
+    title: 'Daftar Tautan Cepat - UntukKita.SDA',
+    description: 'Tautan Cepat Laman Informasi Penting Platform UntukKita.SDA.',
+    pageDescription: 'Tautan Cepat Laman Informasi Penting',
+    pageTitle: 'Daftar Tautan Cepat',
+    headerTitle: 'Tautan Cepat',
   };
 
   return (
