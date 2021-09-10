@@ -1,5 +1,5 @@
+import useSWR from 'swr';
 import PageBuilder from 'components/layout/pageBuilder';
-
 import HomeMenu from 'components/home/home-menu';
 import StatistikCovidSidoarjo from 'components/home/statistik';
 
@@ -23,23 +23,31 @@ export default function Home({ dataStatistik }) {
       headerTitle={siteInfo.headerTitle}
     >
       <main>
-        <StatistikCovidSidoarjo
-          positif={dataStatistik.positif}
-          meninggal={dataStatistik.meninggal}
-          sembuh={dataStatistik.sembuh}
-        />
+        <CardStatistikCovid />
         <HomeMenu />
       </main>
     </PageBuilder>
   );
 }
 
-export async function getStaticProps() {
-  // eslint-disable-next-line import/no-unresolved
-  const dataStatistik = require('data/scraper-covidsda-sheets.json');
-  return {
-    props: {
-      dataStatistik,
-    },
-  };
+function CardStatistikCovid() {
+  const fetcher = url => fetch(url).then(r => r.json());
+  const { data, error } = useSWR('https://sidoarjo-api.azurewebsites.net/covid/statistik', fetcher);
+
+  if (error)
+    return (
+      <StatistikCovidSidoarjo
+        positif="Gagal Dimuat"
+        meninggal="Gagal Dimuat"
+        sembuh="Gagal Dimuat"
+      />
+    );
+  if (!data) return <StatistikCovidSidoarjo positif="----" meninggal="----" sembuh="----" />;
+  return (
+    <StatistikCovidSidoarjo
+      positif={data.positif}
+      meninggal={data.meninggal}
+      sembuh={data.sembuh}
+    />
+  );
 }

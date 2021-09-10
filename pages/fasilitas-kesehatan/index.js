@@ -57,7 +57,7 @@ export default function FasilitasKesehatan({ dataFaskes }) {
 }
 
 export async function getStaticProps() {
-  const dataFaskes = require('../../data/faskes-sheets.json');
+  const dataFaskes = require('data/rumah-sakit-sheets.json');
   return {
     props: {
       dataFaskes,
