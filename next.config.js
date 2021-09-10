@@ -11,7 +11,7 @@ const ContentSecurityPolicy = `
   script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.com *.googletagmanager.com analytics.google.com *.airtable.com unpkg.com;
   img-src 'self' blob: data: https:;
   style-src 'self' 'unsafe-inline';
-  connect-src 'self' www.google-analytics.com analytics.google.com stats.g.doubleclick.net covid.sda.untukkita.my.id;
+  connect-src 'self' www.google-analytics.com analytics.google.com stats.g.doubleclick.net covid.sda.untukkita.my.id https://sidoarjo-api.azurewebsites.net/;
   object-src 'none';
   frame-src 'self' https://*.airtable.com airtable.com;
 `;
